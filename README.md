@@ -2,6 +2,12 @@
 
 A classic single-player Mastermind game with a beautiful web interface, implemented in TypeScript.
 
+## Overview
+This project is a result of experimenting with GitHub Copilot. The first version was a simple
+command-line interface (CLI) game, but it evolved into a TypeScript web application with a
+modern UI after a refactor request. The first version of the web interface had ES module loading
+errors but AI fixed that too.
+
 ## Game Rules
 
 - The computer generates a secret code consisting of 4 colors
