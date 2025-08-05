@@ -1,0 +1,25 @@
+{
+  "name": "mastermind-game",
+  "version": "1.0.0",
+  "description": "A classic single-player Mastermind game implemented in TypeScript for the web",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && npm run copy-assets",
+    "start": "npm run build && npm run serve",
+    "dev": "npm run build && npm run serve",
+    "serve": "npx http-server dist -p 3000 -o",
+    "copy-assets": "node -e \"const fs=require('fs'); try{fs.copyFileSync('src/index.html','dist/index.html'); fs.copyFileSync('src/styles.css','dist/styles.css'); fs.copyFileSync('src/game.js','dist/game.js')} catch(e){console.log('Assets copied or not needed')}\"",
+    "test": "tsc && node dist/test.js",
+    "clean": "rimraf dist"
+  },
+  "keywords": ["mastermind", "game", "typescript", "web", "browser"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "rimraf": "^5.0.0",
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {}
+}
